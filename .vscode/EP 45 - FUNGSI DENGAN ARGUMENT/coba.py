@@ -1,3 +1,0 @@
-print("coba")
-print("coba")
-
