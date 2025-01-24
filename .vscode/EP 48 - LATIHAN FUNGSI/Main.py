@@ -37,27 +37,41 @@ def input_user() :
 
 def hitung_luas(panjang,lebar) :
     """FUNGSI LUAS"""
-    return panjang*lebar
+    luas =  panjang*lebar
+    return display("luas", luas)
 
 def hitung_keliling(panjang,lebar) :
     """FUNGSI KELILING"""
-    return 2*(panjang+lebar)
+    keliling =  2*(panjang+lebar)
+    return display("keliling", keliling)
 
 def display(message,value) :
     """FUNGSI DISPLAY"""
     print(f"Hasil perhitungan {message} = {value}")
 
+def opsi () :
+    pilih = input("1 untuk hitung keliling, 2 untuk hitung luas, 3 untuk hitung keduanya : ")
+    if pilih == "1" :
+        PANJANG,LEBAR = input_user()
+        keliling = hitung_keliling(PANJANG,LEBAR)
+    elif pilih == "2" : 
+        PANJANG,LEBAR = input_user()
+        luas = hitung_luas(PANJANG,LEBAR)
+    elif pilih == "3" :
+        PANJANG,LEBAR = input_user()
+        keliling = hitung_keliling(PANJANG,LEBAR)
+        luas = hitung_luas(PANJANG,LEBAR)
+    else :
+        print("Masukan Opsi Yang Benar!!!")
+
 # Program utama
 while True :
     header()
-    PANJANG,LEBAR = input_user()
-    LUAS = hitung_luas(PANJANG,LEBAR)
-    KELILING = hitung_keliling(PANJANG,LEBAR)
-    display("luas", LUAS)
-    display("keliling", KELILING)
+    opsi()
     
     isContinue = input("Apakah lanjut (y/n)?")
     if isContinue == "n" :
         break
 
 print("Program selesai, terima kasih")
+
