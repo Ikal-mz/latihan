@@ -33,8 +33,11 @@ print(hero3.__dict__)
 
 hero1.siapa()
 hero1.healthup(5)
+hero1.healthup(10)
+hero2.healthup(1)
 
 print(hero1.getHealth())
+print(hero2.getHealth())
 
 
 
