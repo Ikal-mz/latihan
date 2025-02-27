@@ -1,11 +1,11 @@
 # membuat class abstract
 
 # abc = abstract base class
-from abc import ABC,abstractclassmethod
+from abc import ABC,abstractmethod
 
 class Button(ABC):
     
-    @abstractclassmethod
+    @abstractmethod
     def click(self):
         pass
 
